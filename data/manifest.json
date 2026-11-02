@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "source": {
+    "url": "https://medconsults.ai/medication-matrix-prescriber-edition.html",
+    "contentCurrentAsOf": "August 2026",
+    "contentVersion": "v69"
+  },
+  "dataVersion": "21360e205fcd617b8e499f8e4e9962feddee8aeb4f0afbd675fee0156fea2ef0",
+  "generatedAt": "2026-11-02T18:37:37.846Z",
+  "files": [
+    {
+      "name": "bootstrap",
+      "file": "bootstrap.json",
+      "origin": "network",
+      "kind": "object",
+      "count": 3,
+      "bytes": 329423,
+      "sha256": "2156f0ecb26f57ba35ca57c065de5e9b8e8f9c6c356dbeeac8b0ce91d26386e4",
+      "aliases": []
+    }
+  ]
+}

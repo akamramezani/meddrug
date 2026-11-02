@@ -1,0 +1,17 @@
+{
+  "name": "medconsults-data-sync",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Extracts the Medication Matrix data from medconsults.ai into versioned JSON for the Android app",
+  "scripts": {
+    "extract": "node scripts/extract.mjs",
+    "extract:source": "node scripts/extract.mjs --save-scripts"
+  },
+  "dependencies": {
+    "playwright": "^1.56.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

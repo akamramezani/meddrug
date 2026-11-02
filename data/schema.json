@@ -1,0 +1,108 @@
+{
+  "source": {
+    "url": "https://medconsults.ai/medication-matrix-prescriber-edition.html",
+    "contentCurrentAsOf": "August 2026",
+    "contentVersion": "v69"
+  },
+  "files": [
+    {
+      "name": "bootstrap",
+      "origin": "network",
+      "kind": "object",
+      "count": 3,
+      "sha256": "2156f0ecb26f57ba35ca57c065de5e9b8e8f9c6c356dbeeac8b0ce91d26386e4",
+      "bytes": 329423,
+      "aliases": [],
+      "keys": [],
+      "sample": {
+        "categories": [
+          {
+            "key": "cv",
+            "rx": "Cardiovascular",
+            "pt": "Heart & Blood Pressure"
+          },
+          {
+            "key": "endo",
+            "rx": "Endocrine & Diabetes",
+            "pt": "Diabetes & Hormones"
+          },
+          {
+            "key": "inf",
+            "rx": "Anti-infectives",
+            "pt": "Infections"
+          },
+          "… 14 items in total"
+        ],
+        "drugs": [
+          {
+            "id": "lisinopril",
+            "generic": "Lisinopril",
+            "brand": "Prinivil, Zestril",
+            "cls": "ACE inhibitor",
+            "cat": "cv",
+            "uses": [
+              "Hypertension",
+              "Heart failure",
+              "After heart attack (post-MI)"
+            ],
+            "highAlert": false,
+            "blackBox": true,
+            "beers": false,
+            "weightBased": false,
+            "pedsOK": "limited",
+            "pregAvoid": true,
+            "qt": false,
+            "sero": false,
+            "sickDay": true
+          },
+          {
+            "id": "losartan",
+            "generic": "Losartan",
+            "brand": "Cozaar",
+            "cls": "Angiotensin II receptor blocker (ARB)",
+            "cat": "cv",
+            "uses": [
+              "Hypertension",
+              "Diabetic kidney protection",
+              "Stroke risk reduction (with LVH)"
+            ],
+            "highAlert": false,
+            "blackBox": true,
+            "beers": false,
+            "weightBased": false,
+            "pedsOK": "limited",
+            "pregAvoid": true,
+            "qt": false,
+            "sero": false,
+            "sickDay": true
+          },
+          {
+            "id": "metoprolol",
+            "generic": "Metoprolol",
+            "brand": "Lopressor (tartrate), Toprol-XL (succinate), Betaloc",
+            "cls": "Beta-1 selective blocker",
+            "cat": "cv",
+            "uses": [
+              "Hypertension",
+              "Angina",
+              "Heart failure (succinate)",
+              "… 5 items in total"
+            ],
+            "highAlert": false,
+            "blackBox": true,
+            "beers": false,
+            "weightBased": false,
+            "pedsOK": "limited",
+            "pregAvoid": false,
+            "qt": false,
+            "sero": false,
+            "sickDay": false
+          },
+          "… 910 items in total"
+        ],
+        "slots": null
+      },
+      "file": "bootstrap.json"
+    }
+  ]
+}
