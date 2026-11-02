@@ -1,0 +1,43 @@
+name: Sync medication data
+
+on:
+  workflow_dispatch:          # the "Run workflow" button in the Actions tab
+  schedule:
+    - cron: '17 5 * * 1'      # every Monday, 05:17 UTC
+
+permissions:
+  contents: write             # lets the job commit the refreshed data
+
+concurrency:
+  group: sync-data
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Extract data from the page
+        run: node scripts/extract.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Data unchanged - nothing to commit."
+          else
+            git commit -m "data: sync from medconsults.ai"
+            git push
+          fi
